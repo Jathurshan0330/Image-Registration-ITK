@@ -12,6 +12,7 @@ from seaborn.matrix import clustermap
 import warnings
 warnings.filterwarnings("ignore")
 import argparse
+import os
 
 
 def parse_option():
@@ -51,9 +52,9 @@ def main():
     pixel_type = itk.F
     fixed_image_file = args.fixed_img_path
     moving_image_file = args.moving_img_path
-    reg_image_file_trans  = args.output_path + '/reg_trans.vtk"'
-    diff_img_before_file_trans = args.output_path + '/img_before_trans.vtk'
-    diff_img_after_file_trans  = args.output_path + '/img_before_trans.vtk'
+    reg_image_file_trans  = os.path.join(args.output_path, 'reg_trans.vtk')
+    diff_img_before_file_trans = os.path.join(args.output_path , 'img_before_trans.vtk')
+    diff_img_after_file_trans  = os.path.join(args.output_path ,'img_before_trans.vtk')
 
     fixed_img = itk.imread(fixed_image_file, pixel_type)
     moving_img = itk.imread(moving_image_file, pixel_type)
@@ -95,6 +96,7 @@ def main():
     initialParameters = movingInitialTransform.GetParameters()
     initialParameters[0] = 0
     initialParameters[1] = 0
+    initialParameters[2] = 0
     movingInitialTransform.SetParameters(initialParameters)
     reg.SetMovingInitialTransform(movingInitialTransform)
 
@@ -151,6 +153,7 @@ def main():
     print("Result:")
     print(" Translation X = " + str(translationAlongX))
     print(" Translation Y = " + str(translationAlongY))
+    print(" Translation Z = " + str(translationAlongZ))
     print(" Iterations    = " + str(numberOfIterations))
     print(" Metric value  = " + str(bestValue))
     print("=============================================>")
