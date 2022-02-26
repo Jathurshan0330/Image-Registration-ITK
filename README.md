@@ -13,10 +13,16 @@ Here, 2 MRI volumes of the same subject acquired as a part of Female dataset of 
 
 ## Getting Started
 
+Demo code with scripts (Colab): 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Jathurshan0330/Image-Registration-ITK/blob/master/DEMO_Image_Registraionipynb.ipynb)
+
+Image Registration Algorithm Development (Colab): 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Jathurshan0330/Image-Registration-ITK/blob/master/170248G_Image_Registration.ipynb)
+
 ### Installation
-
-`pip install -r requirements.txt`
-
+```
+pip install -r requirements.txt
+```
 ### Script for Image Registration
 
 The parameters for the registration framework are finetuned and set as default values. 
@@ -27,8 +33,35 @@ The parameters for the registration framework are finetuned and set as default v
 - Registration : itk.ImageRegistrationMethodv4
 
 Run the following script for image registration:
-
+```
 python [registraion.py](http://registraion.py/) --fixed_img_path "Path to Fixed Image in .vtk" --moving_img_path "Path to Moving Image in .vtk" --output_path "Path to Output"
+```
+### Parameters
+Input arguements
+```
+parser.add_argument('--fixed_img_path', type=str, help='Path fixed image')
+parser.add_argument('--moving_img_path', type=str,help='Path moving image')
+parser.add_argument('--output_path', type=str, help='Path to save the registered image')
+```
+
+Optimization parameters
+```
+--lr => Learning rate optimizer, default = 4 
+--Min_step_length => Minimum Step Length, default = 0.0005 
+--relax_factor => Relaxation Factor, default = 0.5
+--num_iter => Number of Iterations, default = 200 
+```
+
+Metric parameters
+```
+--num_hist_bins =>  Number of Histogram Bins, default = 24
+```
+Registration parameters
+```
+--num_levels => Number of Levels, default = 1 
+--smooth_sigma_level => Smoothing Sigmas Per Level, default = 0 
+--shrink_level => Shrink Factors Per Level, default = 1
+```
 
 ## Optimization Results
 
