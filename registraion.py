@@ -45,7 +45,21 @@ def parse_option():
 
 def main():
     args = parse_option()
-    print(args)
+    msg = 'fixed_img_path: {0}\n'\
+          'moving_img_path: {1}\n'\
+          'output_path: {2}\n'\
+          'lr: {3}\n'\
+          'Min_step_length: {4}\n'\
+          'relax_factor: {5}\n'\
+          'num_iter: {6}\n'\
+          'num_hist_bins: {7}\n'\
+          'num_levels: {8}\n'\
+          'smooth_sigma_level: {9}\n'\
+          'shrink_level: {10}\n'.format(
+                          args.fixed_img_path,args.moving_img_path,args.output_path, args.lr,
+                          args.Min_step_length,args.relax_factor,args.num_iter,
+                          args.num_hist_bins,args.num_levels,args.smooth_sigma_level,args.shrink_level)
+    print(msg)
 
 
     #Images and Output files
