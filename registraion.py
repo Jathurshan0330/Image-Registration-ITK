@@ -133,7 +133,7 @@ def main():
         iter.append(opt.GetCurrentIteration())
         val.append(opt.GetValue())
         print(
-            "Index : %i -->  Metric : %f   (X,Y,Z) : (%f %f %f)"
+            "Index : %i -->  Metric : %f   Translation (X,Y,Z) : (%f %f %f)"
             % (
                 opt.GetCurrentIteration(),
                 opt.GetValue(),
