@@ -145,7 +145,7 @@ def main():
     finalParameters = transform.GetParameters()
     translationAlongX = finalParameters.GetElement(0)
     translationAlongY = finalParameters.GetElement(1)
-
+    translationAlongZ = finalParameters.GetElement(2)
     numberOfIterations = opt.GetCurrentIteration()
 
     bestValue = opt.GetValue()
