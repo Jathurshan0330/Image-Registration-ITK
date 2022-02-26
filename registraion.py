@@ -203,3 +203,6 @@ def main():
     resampler.SetTransform(identityTransform)
     writer.SetFileName(diff_img_before_file_trans)
     writer.Update()
+
+if __name__ == '__main__':
+    main()
