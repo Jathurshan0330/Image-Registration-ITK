@@ -22,8 +22,6 @@ def parse_option():
     parser.add_argument('--moving_img_path', type=str,help='Path moving image')
     parser.add_argument('--output_path', type=str, help='Path to save the registered image')
 
-    parser.add_argument('--demag_kern', type=int, default = 32, choices=[32,16,8,4],  help='Downsampling Factor (Beta)')
-    parser.add_argument('--batch_size', type=int, default = 32 ,  help='Batch Size')
     
     #Optimization parameters
     parser.add_argument('--lr', type=float, default = 4 ,  help='Learning rate optimizer')
