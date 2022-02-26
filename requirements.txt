@@ -1,0 +1,7 @@
+# external requirements
+numpy
+matplotlib
+itk 
+itkwidgets 
+ipywidgets
+seaborn
