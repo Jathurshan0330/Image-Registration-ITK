@@ -35,6 +35,7 @@ pip install -r requirements.txt
 The parameters for the registration framework are finetuned and set as default values. 
 
 - Transformation : itk.TranslationTransform
+- Interpolator : itk.LinearInterpolateImageFunction
 - Metric : itk.MattesMutualInformationImageToImageMetricv4
 - Optimizer : itk.RegularStepGradientDescentOptimizerv4
 - Registration : itk.ImageRegistrationMethodv4
