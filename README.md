@@ -86,13 +86,13 @@ Registration parameters
 ## Validation of Registration
 In order to justify that both MRI volumes have registered correctly, line intensity plots were acquired for comparison. The Figure below shows the line drawn on fixed, moving and registered images, where the line intensity plot were acquired. 
 
-<img src="https://user-images.githubusercontent.com/52663918/155893200-fadef37b-2a53-44fd-853f-9b208b98391d.jpg" width="100"/> 
+<img src="https://user-images.githubusercontent.com/52663918/155893200-fadef37b-2a53-44fd-853f-9b208b98391d.jpg" width="150"/> 
 
 
 Line intensity plots before and after registration are shown in figures below. Figure on right clearly shows that the volumes have aligned correctly in spatial domain (y axis – translation in Y was higher during registration) after image registration, thus justifies the method. 
 
                     Before Image Registration                           After Image Registration
-<img src="https://user-images.githubusercontent.com/52663918/155893380-c22a15de-2725-4a77-9eac-c738f4a00195.jpg" width="600"/><img src="https://user-images.githubusercontent.com/52663918/155893383-55007e86-54b4-4679-8de0-c4f2571f19f7.jpg" width="600"/>
+<img src="https://user-images.githubusercontent.com/52663918/155893380-c22a15de-2725-4a77-9eac-c738f4a00195.jpg" width="400"/><img src="https://user-images.githubusercontent.com/52663918/155893383-55007e86-54b4-4679-8de0-c4f2571f19f7.jpg" width="400"/>
 
 
 
