@@ -15,7 +15,8 @@ The following repository consists of implementation of image registration of two
 Here, 2 MRI volumes of the same subject acquired as a part of Female dataset of Visible Human Project are used. The volumes are acquired using 2 different MRI modalities: 1) T2-Weighted MRI and 2) T1-Weighted MRI.  Here, the task of registering T2-Weighted MRI volume **(Moving Image)**
  to a T1-Weighted MRI volume **(Fixed Image)** is conducted.  
 
-![git1.png](Image%20Regi%204d8c5/git1.png)
+<img src="Image%20Regi%204d8c5/git1.png" width="700"/>
+
 
 ## Getting Started
 
