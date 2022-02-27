@@ -4,8 +4,9 @@
 
 The following repository consists of implementation of image registration of two image volumes from different MRI modalities using ITK. The registration algorithm was implemented based on ITK and the components of the framework were selected based on visual inspection along with theoretical validation and trial and error.
 
+https://user-images.githubusercontent.com/52663918/155875614-56f0c94f-ad32-4550-b60b-9177f79b6366.mp4 | https://user-images.githubusercontent.com/52663918/155875623-8a2496ca-d506-4baa-8f4b-13e194f5f9ae.mp4
 
-![befiregif1.gif](Image%20Regi%204d8c5/befiregif1.gif)  
+
 
 
 ## Dataset
