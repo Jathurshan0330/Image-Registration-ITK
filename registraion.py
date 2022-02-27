@@ -35,8 +35,8 @@ def parse_option():
 
     #Registration parameters
     parser.add_argument('--num_levels', type=int, default = 1 ,  help='Number of Levels')
-    parser.add_argument('--smooth_sigma_level', type=float, default = 0 ,  help='Smoothing Sigmas Per Level')	
-    parser.add_argument('--shrink_level', type=int, default = 1 ,  help='Shrink Factors Per Level')
+    parser.add_argument('--smooth_sigma_level', type=list, default = [0] ,  help='Smoothing Sigmas Per Level')	
+    parser.add_argument('--shrink_level', type=list, default = [1] ,  help='Shrink Factors Per Level')
           
     opt = parser.parse_args()
     
@@ -122,8 +122,8 @@ def main():
 
     #------------------------------------
     reg.SetNumberOfLevels(args.num_levels)                  ###
-    reg.SetSmoothingSigmasPerLevel([args.smooth_sigma_level])       ###
-    reg.SetShrinkFactorsPerLevel([args.shrink_level])         ###
+    reg.SetSmoothingSigmasPerLevel(args.smooth_sigma_level)       ###
+    reg.SetShrinkFactorsPerLevel(args.shrink_level)         ###
     #------------------------------------
 
     iter = []
@@ -133,7 +133,7 @@ def main():
         iter.append(opt.GetCurrentIteration())
         val.append(opt.GetValue())
         print(
-            "Index : %i -->  Metric : %f   Translation (X,Y,Z) : (%f %f %f)"
+            "Index : %i -->  Metric : %f   Translation : (%f %f %f)"
             % (
                 opt.GetCurrentIteration(),
                 opt.GetValue(),
@@ -165,11 +165,11 @@ def main():
     bestValue = opt.GetValue()
 
     print("Result:")
-    print(" Translation X = " + str(translationAlongX))
-    print(" Translation Y = " + str(translationAlongY))
-    print(" Translation Z = " + str(translationAlongZ))
-    print(" Iterations    = " + str(numberOfIterations))
-    print(" Metric value  = " + str(bestValue))
+    print(f" Translation (X)    : {translationAlongX}")
+    print(f" Translation (Y)    : {translationAlongY}")
+    print(f" Translation (Z)    : {translationAlongZ}")
+    print(f" Num of Iterations  : {numberOfIterations}")
+    print(f" Metric value       : {bestValue}")
     print("=============================================>")
 
 
