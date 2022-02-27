@@ -87,6 +87,11 @@ def main():
     ########################### Transformation ###########################
     transform_type = itk.TranslationTransform[itk.D,dim]
     initial_transform = transform_type.New()
+    
+    ########################### Interpolator ###########################
+    interpolator_type = itk.LinearInterpolateImageFunction[fixed_img_type, itk.D]
+    fixed_interp = interpolator_type.New()
+    moving_interp = interpolator_type.New()
 
     ############################# Optimizer ##############################
     opt = itk.RegularStepGradientDescentOptimizerv4.New( LearningRate=args.lr,        ###
@@ -99,6 +104,8 @@ def main():
     metric.SetNumberOfHistogramBins(args.num_hist_bins)  ####
     metric.SetUseMovingImageGradientFilter(False)
     metric.SetUseFixedImageGradientFilter(False)
+    metric.SetFixedInterpolator(fixed_interp)
+    metric.SetMovingInterpolator(moving_interp)
 
     ########################### Registration ###############################
     reg = itk.ImageRegistrationMethodv4[fixed_img_type, moving_img_type].New( FixedImage = fixed_img, 
