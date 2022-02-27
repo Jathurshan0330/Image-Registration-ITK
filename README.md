@@ -4,6 +4,10 @@
 
 The following repository consists of implementation of image registration of two image volumes from different MRI modalities using ITK. The registration algorithm was implemented based on ITK and the components of the framework were selected based on visual inspection along with theoretical validation and trial and error.
 
+Before Image Registration                               |  After Image Registration
+![befiregif1.mp4](Image%20Regi%204d8c5/befiregif1.mp4)  |  ![aftergif1.mp4](Image%20Regi%204d8c5/aftergif1.mp4)
+
+
 ## Dataset
 
 Here, 2 MRI volumes of the same subject acquired as a part of Female dataset of Visible Human Project are used. The volumes are acquired using 2 different MRI modalities: 1) T2-Weighted MRI and 2) T1-Weighted MRI.  Here, the task of registering T2-Weighted MRI volume **(Moving Image)**
