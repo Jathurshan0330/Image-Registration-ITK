@@ -34,7 +34,7 @@ The parameters for the registration framework are finetuned and set as default v
 
 Run the following script for image registration:
 ```
-python [registraion.py](http://registraion.py/) --fixed_img_path "Path to Fixed Image in .vtk" --moving_img_path "Path to Moving Image in .vtk" --output_path "Path to Output"
+python registraion.py --fixed_img_path "Path to Fixed Image in .vtk" --moving_img_path "Path to Moving Image in .vtk" --output_path "Path to Output"
 ```
 ### Parameters
 Input arguements
