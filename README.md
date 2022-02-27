@@ -107,3 +107,7 @@ Line intensity plots before and after registration are shown in figures below. F
 ![result21.png](Image%20Regi%204d8c5/result21.png)
 
 ![results26.png](Image%20Regi%204d8c5/results26.png)
+
+
+## Reference
+Hans J. Johnson, Matthew M. McCormick, Luis Ibanez, and the Insight Software Consortium, “The ITK Software Guidebook 2: Design and Functionality Fourth Edition Updated for ITK version 5.2.0.”
